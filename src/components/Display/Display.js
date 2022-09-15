@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Display.css';
 
-export default function Display({ headImg, middleImg }) {
+export default function Display({ headImg, middleImg, bottomImg }) {
   return (
     <div className="display-el">
       <div name="head-dis">
@@ -12,7 +12,7 @@ export default function Display({ headImg, middleImg }) {
         <img alt={middleImg} src ={`${process.env.PUBLIC_URL}/assets/${middleImg}.png`}/>
       </div>
       <div name="bottom-dis">
-        <img/>
+        <img alt={bottomImg} src={`${process.env.PUBLIC_URL}/assets/${bottomImg}.png`}/>
       </div>
     </div>
   );

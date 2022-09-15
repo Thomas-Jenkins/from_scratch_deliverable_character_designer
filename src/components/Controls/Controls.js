@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg }) {
+export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg }) {
   return (
     <div className="controls">
       <div className="top-input">
@@ -20,10 +20,10 @@ export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg 
         <label>Shirt</label>
       </div>
       <div className="bottom-input">
-        <select name="bottom">
-          <option value="bottomOne">Bottom One</option>
-          <option value="bottomTwo">Bottom Two</option>
-          <option value="bottomThree">Bottom Three</option>
+        <select name="bottom" value={bottomImg} onChange={(e) => setBottomImg(e.target.value)}>
+          <option value="blue-pants">Bottom One</option>
+          <option value="leg-pants">Bottom Two</option>
+          <option value="white-pants">Bottom Three</option>
         </select>
         <label>Bottom</label>
       </div>

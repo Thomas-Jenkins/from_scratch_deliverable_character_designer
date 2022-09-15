@@ -8,11 +8,12 @@ import Stats from '../Stats/Stats';
 export default function Main() {
   const [headImg, setHeadImg] = useState('bird-head');
   const [middleImg, setMiddleImg] = useState('blue-middle');
+  const [bottomImg, setBottomImg] = useState('blue-pants');
   return (
     <main>
       <>
-        <Controls {...{ headImg, setHeadImg, middleImg, setMiddleImg }} />
-        <Display {...{ headImg, middleImg }} />
+        <Controls {...{ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg }} />
+        <Display {...{ headImg, middleImg, bottomImg }} />
         <Stats />
       </>
     </main>
