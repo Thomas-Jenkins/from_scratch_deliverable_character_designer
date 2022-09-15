@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Controls() {
+export default function Controls(head, setHead) {
   return (
     <div className="controls">
       <div className="top-input">
