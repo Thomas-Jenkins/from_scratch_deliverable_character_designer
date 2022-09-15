@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function Controls(head, setHead) {
+export default function Controls({ headImg, setHeadImg }) {
   return (
     <div className="controls">
       <div className="top-input">
-        <select name="top">
-          <option value="headOne">Head One</option>
-          <option value="headTwo">Head Two</option>
-          <option value="headThree">Head Three</option>
+        <select name="top" value={headImg} onChange={(e) => setHeadImg(e.target.value)}>
+          <option value="bird-head">Head One</option>
+          <option value="dog-head">Head Two</option>
+          <option value="horse-head">Head Three</option>
         </select>
         <label>Head</label>
       </div>
