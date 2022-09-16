@@ -11,13 +11,13 @@ export default function Main() {
   const [bottomImg, setBottomImg] = useState('blue-pants');
   const [headChange, setHeadChange] = useState(0);
 
-  // const handleIncrement = () => {
-
-  // };
+  const handleIncrement = () => {
+    setHeadChange((prevState) => prevState + 1);
+  };
   return (
     <main>
-      <>
-        <Controls {...{ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg, headChange, setHeadChange }} />
+      <>               
+        <Controls headImg={headImg} setHeadImg={setHeadImg} middleImg={middleImg} setMiddleImg={setMiddleImg} bottomImg={bottomImg} setBottomImg={setBottomImg} headChange={headChange} handleIncrement={handleIncrement} />
         <Display {...{ headImg, middleImg, bottomImg }} />
         <Stats {...{ headChange }}/>
       </>
