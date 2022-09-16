@@ -11,9 +11,9 @@ export default function Main() {
   const [bottomImg, setBottomImg] = useState('blue-pants');
   const [headChange, setHeadChange] = useState(0);
 
-  const handleIncrement = () => {
+  // const handleIncrement = () => {
 
-  };
+  // };
   return (
     <main>
       <>
