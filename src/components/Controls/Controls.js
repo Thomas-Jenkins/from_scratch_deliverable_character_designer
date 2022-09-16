@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg, headChange, setHeadChange, handleIncrement }) {
+export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg, handleHeadIncrement, handleMiddleIncrement, handleBottomIncrement }) {
   return (
     <div className="controls">
       <div className="top-input">
-        <select name="top" value={ headImg } onChange={(e) => { setHeadImg(e.target.value); handleIncrement(); }}>
+        <select name="top" value={ headImg } onChange={(e) => { setHeadImg(e.target.value); handleHeadIncrement(); }}>
           <option value="bird-head">Head One</option>
           <option value="dog-head">Head Two</option>
           <option value="horse-head">Head Three</option>
@@ -12,7 +12,7 @@ export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg,
         <label>Head</label>
       </div>
       <div className="middle-input">
-        <select name="middle" value={middleImg} onChange={(e) => setMiddleImg(e.target.value)}>
+        <select name="middle" value={middleImg} onChange={(e) => { setMiddleImg(e.target.value); handleMiddleIncrement(); }}>
           <option value="blue-middle">Middle One</option>
           <option value="pink-middle">Middle Two</option>
           <option value="red-middle">Middle Three</option>
@@ -20,7 +20,7 @@ export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg,
         <label>Shirt</label>
       </div>
       <div className="bottom-input">
-        <select name="bottom" value={bottomImg} onChange={(e) => setBottomImg(e.target.value)}>
+        <select name="bottom" value={bottomImg} onChange={(e) => { setBottomImg(e.target.value); handleBottomIncrement(); }}>
           <option value="blue-pants">Bottom One</option>
           <option value="leg-pants">Bottom Two</option>
           <option value="white-pants">Bottom Three</option>
