@@ -26,9 +26,10 @@ export default function Controls({
 }) {
   
   const handleAddCatchphrase = () => {
-    addCatchphrase((prevCatchphrases) => [currentCatchphrase, ...prevCatchphrases]);
-    
+    addCatchphrase((prevCatchphrases) => [...prevCatchphrases, currentCatchphrase]);
   };
+
+  
 
   return (
     <>
