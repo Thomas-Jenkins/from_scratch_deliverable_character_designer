@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 import Controls from '../Controls/Controls';
 import Display from '../Display/Display';
-import Stats from '../Stats/Stats';
+
+import './Main.css';
 
 export default function Main() {
   const [headImg, setHeadImg] = useState('bird-head');
@@ -28,9 +29,9 @@ export default function Main() {
   return (
     <main>
       <>               
-        <Controls headImg={headImg} setHeadImg={setHeadImg} middleImg={middleImg} setMiddleImg={setMiddleImg} bottomImg={bottomImg} setBottomImg={setBottomImg} headChange={headChange} handleHeadIncrement={handleHeadIncrement} middleChange={middleChange} handleMiddleIncrement={handleMiddleIncrement} handleBottomIncrement={handleBottomIncrement} catchphrase={catchphrase} addCatchphrase={addCatchphrase} currentCatchphrase={currentCatchphrase} setCurrentCatchphrase={setCurrentCatchphrase} />
+        <Controls headImg={headImg} setHeadImg={setHeadImg} middleImg={middleImg} setMiddleImg={setMiddleImg} bottomImg={bottomImg} setBottomImg={setBottomImg} headChange={headChange} handleHeadIncrement={handleHeadIncrement} middleChange={middleChange} bottomChange={bottomChange} handleMiddleIncrement={handleMiddleIncrement} handleBottomIncrement={handleBottomIncrement} catchphrase={catchphrase} addCatchphrase={addCatchphrase} currentCatchphrase={currentCatchphrase} setCurrentCatchphrase={setCurrentCatchphrase} />
         <Display headImg={headImg} middleImg={middleImg} bottomImg={bottomImg} />
-        <Stats headChange={headChange} middleChange={middleChange} bottomChange={bottomChange} catchphrase={catchphrase} />
+        
       </>
     </main>
 
