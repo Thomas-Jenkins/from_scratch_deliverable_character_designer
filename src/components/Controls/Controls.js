@@ -1,6 +1,13 @@
 import React from 'react';
 
-export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg, handleHeadIncrement, handleMiddleIncrement, handleBottomIncrement }) {
+export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg, bottomImg, setBottomImg, handleHeadIncrement, handleMiddleIncrement, handleBottomIncrement, addCatchphrase, currentCatchphrase, setCurrentCatchphrase }) {
+  
+  const handleAddCatchphrase = () => {
+    
+    addCatchphrase((prevCatchphrases) => [currentCatchphrase, ...prevCatchphrases]);
+    // console.log(catchphrase);
+  };
+
   return (
     <div className="controls">
       <div className="top-input">
@@ -28,9 +35,12 @@ export default function Controls({ headImg, setHeadImg, middleImg, setMiddleImg,
         <label>Bottom</label>
       </div>
       <div className="catchphrase-input">
-        <input name="catchphrase">
+        <input name="catchphrase" value={currentCatchphrase} onChange={(e) => {
+          setCurrentCatchphrase(e.target.value);
+        }} >
 
         </input>
+        <button name="catchphrase-button" onClick={handleAddCatchphrase}>Add Catchphrase</button>
         <label>Catchphrase</label>
       </div>
     </div>

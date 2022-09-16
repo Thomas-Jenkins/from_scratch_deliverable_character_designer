@@ -12,6 +12,8 @@ export default function Main() {
   const [headChange, setHeadChange] = useState(0);
   const [middleChange, setMiddleChange] = useState(0);
   const [bottomChange, setBottomChange] = useState(0);
+  const [catchphrase, addCatchphrase] = useState([]);
+  const [currentCatchphrase, setCurrentCatchphrase] = useState('');
 
   const handleHeadIncrement = () => {
     setHeadChange((prevState) => prevState + 1);
@@ -22,12 +24,13 @@ export default function Main() {
   const handleBottomIncrement = () => {
     setBottomChange((prevState) => prevState + 1);
   };
+  
   return (
     <main>
       <>               
-        <Controls headImg={headImg} setHeadImg={setHeadImg} middleImg={middleImg} setMiddleImg={setMiddleImg} bottomImg={bottomImg} setBottomImg={setBottomImg} headChange={headChange} handleHeadIncrement={handleHeadIncrement} middleChange={middleChange} handleMiddleIncrement={handleMiddleIncrement} handleBottomIncrement={handleBottomIncrement} />
-        <Display {...{ headImg, middleImg, bottomImg }} />
-        <Stats {...{ headChange, middleChange, bottomChange }}/>
+        <Controls headImg={headImg} setHeadImg={setHeadImg} middleImg={middleImg} setMiddleImg={setMiddleImg} bottomImg={bottomImg} setBottomImg={setBottomImg} headChange={headChange} handleHeadIncrement={handleHeadIncrement} middleChange={middleChange} handleMiddleIncrement={handleMiddleIncrement} handleBottomIncrement={handleBottomIncrement} catchphrase={catchphrase} addCatchphrase={addCatchphrase} currentCatchphrase={currentCatchphrase} setCurrentCatchphrase={setCurrentCatchphrase} />
+        <Display headImg={headImg} middleImg={middleImg} bottomImg={bottomImg} />
+        <Stats headChange={headChange} middleChange={middleChange} bottomChange={bottomChange} catchphrase={catchphrase} />
       </>
     </main>
 
