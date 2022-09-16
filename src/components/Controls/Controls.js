@@ -1,5 +1,6 @@
 import React from 'react';
 import Stats from '../Stats/Stats';
+import './Controls.css';
 
 export default function Controls({ 
   headImg, 
@@ -17,7 +18,7 @@ export default function Controls({
   addCatchphrase, 
   currentCatchphrase, 
   setCurrentCatchphrase,
-   
+
   headChange, 
   middleChange, 
   bottomChange, 
@@ -26,6 +27,7 @@ export default function Controls({
   
   const handleAddCatchphrase = () => {
     addCatchphrase((prevCatchphrases) => [currentCatchphrase, ...prevCatchphrases]);
+    
   };
 
   return (
@@ -61,7 +63,7 @@ export default function Controls({
           }} >
           </input>
           <button name="catchphrase-button" onClick={handleAddCatchphrase}>Add Catchphrase</button>
-          <label>Catchphrase</label>
+          {/* <label>Catchphrase</label> */}
         </div>
         <Stats headChange={headChange} middleChange={middleChange} bottomChange={bottomChange} catchphrase={catchphrase} />
       </div>

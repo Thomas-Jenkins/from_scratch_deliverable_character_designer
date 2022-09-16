@@ -2,6 +2,6 @@ main {
     width: 600px;
     justify-items: center;
     display: grid;
-
+    background-color: blanchedalmond;
     grid-template-columns: 2fr 1fr;
 }
